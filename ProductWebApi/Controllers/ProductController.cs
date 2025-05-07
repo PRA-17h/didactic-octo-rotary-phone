@@ -45,10 +45,10 @@ namespace ProductWebApi.Controllers
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product == null)
             {
-                return Ok(null);
+                return BadRequest();
             }
 
-            return product;
+            return Ok(product);
         }
 
         // ✅ CREATE
