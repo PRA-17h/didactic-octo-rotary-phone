@@ -45,7 +45,7 @@ namespace ProductWebApi.Controllers
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
             return Ok(product);
